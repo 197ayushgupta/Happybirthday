@@ -1,0 +1,127 @@
+body {
+    background-color: #f0e68c;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    position: relative;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.heart-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+    transform: rotate(-45deg);
+    animation: float 3s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.cards-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.greeting-card {
+    width: 300px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.card-content.open {
+    max-height: 200px; /* Adjust based on content */
+}
+
+.photo-section {
+    margin: 10px 0;
+}
+
+.photo-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.open {
+    z-index: 2; /* Bring the open card to the front */
+}

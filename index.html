@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mohini</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday Mohini❤</h1>
+        <p>Wishing you a day filled with love, joy, and beautiful moments!</p>
+        
+        <div class="heart-container">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <button id="openCardsButton" onclick="toggleCards()"> hello only for Mohini Mishra </button>
+        
+        <div class="cards-container">
+            <div class="greeting-card" id="card1">
+                <div class="card-header" onclick="toggleCard('card1')">Your behaviour </div>
+                <div class="card-content">
+                    <div class="photo-section">
+               <p> Happy Birthday Mohini god bless you are the most beautiful girl I ever seen your beauty is your personality and your purity .</p>
+                    </div>
+                    <div class="message">
+                    </div>
+                </div>
+            </div>
+            <p>Happy Birthday to the most beautiful girl in the world!</p>
+                        <p>May your day be filled with love and happiness!</p>
+
+            <div class="greeting-card" id="card2">
+                <div class="card-header" onclick="toggleCard('card2')">Your are always special </div>
+                <div class="card-content">
+                    <div class="photo-section">
+                        <p>
+                            you are always special for me and I remember every memories is special with you. you aregorgeous in all perspective because of your simplicity. 
+                        </p>
+                    </div>
+                    <div class="message">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <p>You are my sunshine and my joy! </p> <p>Wishing you all the best on your special day!</p>
+
+    <script>
+        function toggleCards() {
+            const cards = document.querySelectorAll('.greeting-card');
+            cards.forEach(card => {
+                card.classList.toggle('open');
+            });
+        }
+
+        function toggleCard(cardId) {
+            const cardContent = document.getElementById(cardId).querySelector('.card-content');
+            cardContent.classList.toggle('open');
+        }
+    </script>
+    
+</body>
+</html>
